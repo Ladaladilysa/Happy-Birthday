@@ -8,7 +8,8 @@
         body {
             text-align: center;
             background: linear-gradient(to right, #ff9a9e, #fad0c4, #ff9a9e);
-            font-family: Georgia, sans-serif; color: #e0218a;
+            font-family: Georgia, sans-serif;
+            color: #e0218a;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -16,10 +17,27 @@
             align-items: center;
             overflow: hidden;
             position: relative;
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         h1 {
-            font-size: 3em;
+            font-size: 4em;
             color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            animation: bounce 2s infinite alternate;
+        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+        p {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: fadeIn 3s ease-in;
         }
         .balloons {
             position: absolute;
@@ -27,17 +45,28 @@
             top: 0;
         }
         .balloon {
-            width: 50px;
-            height: 70px;
+            width: 60px;
+            height: 80px;
             background: pink;
             border-radius: 50%;
             position: absolute;
             bottom: -100px;
             animation: floatUp 5s infinite ease-in-out;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
         }
         @keyframes floatUp {
             0% { transform: translateY(100vh); opacity: 0; }
             100% { transform: translateY(-10vh); opacity: 1; }
+        }
+        img {
+            border-radius: 20px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            animation: pulse 2s infinite alternate;
+        }
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
         }
         .gif-container {
             position: fixed;
@@ -46,26 +75,22 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            padding: 10px;
+            padding: 20px;
         }
-        .gif-container .left {
-            position: absolute;
-            bottom: 0;
-            left: 10px;
-            width: 50px;
+        .gif-container .left, .gif-container .right {
+            width: 80px;
+            animation: wiggle 1.5s infinite alternate;
         }
-        .gif-container .right {
-            position: absolute;
-            bottom: 0;
-            right: 10px;
-            width: 50px;
+        @keyframes wiggle {
+            from { transform: rotate(-5deg); }
+            to { transform: rotate(5deg); }
         }
     </style>
     <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
     <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 </head>
 <body>
-    <h1>🎉 Happy Birthday Eonnie! 🎂</h1>
+    <h1>🎉 Happy Birthday, Eonnie! 🎂</h1>
     <p>Wishing you a day filled with love, joy, and laughter! Love ya!</p>
     <div class="balloons">
         <div class="balloon" style="left: 10%; background: #ffb6c1; animation-duration: 3s;"></div>
@@ -76,13 +101,13 @@
         <div class="balloon" style="left: 80%; background: #ffc0cb; animation-duration: 5.5s;"></div>
         <div class="balloon" style="left: 90%; background: #ffb6c1; animation-duration: 3.5s;"></div>
     </div>
-    <img src="https://i.imgur.com/YNdkMVD.png" alt="Cute Cat" width="200">
+    <img src="https://i.imgur.com/YNdkMVD.png" alt="Cute Cat" width="250">
     <div class="gif-container">
-        <div class="tenor-gif-embed left" data-postid="4875956593066505581" data-share-method="host" data-aspect-ratio="1.19139" data-width="50px">
+        <div class="tenor-gif-embed left" data-postid="4875956593066505581" data-share-method="host" data-aspect-ratio="1.19139" data-width="80px">
             <a href="https://tenor.com/view/kiss-gif-4875956593066505581">Kiss GIF</a> from 
             <a href="https://tenor.com/search/kiss-gifs">Kiss GIFs</a>
         </div>
-        <div class="tenor-gif-embed right" data-postid="4875956593066505581" data-share-method="host" data-aspect-ratio="1.19139" data-width="50px">
+        <div class="tenor-gif-embed right" data-postid="4875956593066505581" data-share-method="host" data-aspect-ratio="1.19139" data-width="80px">
             <a href="https://tenor.com/view/kiss-gif-4875956593066505581">Kiss GIF</a> from 
             <a href="https://tenor.com/search/kiss-gifs">Kiss GIFs</a>
         </div>
