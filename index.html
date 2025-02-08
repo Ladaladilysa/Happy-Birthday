@@ -7,7 +7,7 @@
     <style>
         body {
             text-align: center;
-            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            background: linear-gradient(to right, #ff9a9e, #fad0c4, #ff9a9e);
             font-family: Georgia, sans-serif; color: #e0218a;
             height: 100vh;
             display: flex;
@@ -15,6 +15,7 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            position: relative;
         }
         h1 {
             font-size: 3em;
@@ -38,17 +39,49 @@
             0% { transform: translateY(100vh); opacity: 0; }
             100% { transform: translateY(-10vh); opacity: 1; }
         }
+        .gif-container {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 10px;
+        }
+        .gif-container .left {
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            width: 90px;
+        }
+        .gif-container .right {
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            width: 90px;
+        }
     </style>
     <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 </head>
 <body>
-    <h1>🎉 Happy Birthday Eonnie! 🎂</h1>
-    <p>Wishing you a day filled with love, joy, and laughter! Love you!</p>
+    <h1>🎉 Happy Birthday! 🎂</h1>
+    <p>Wishing you a day filled with love, joy, and laughter!</p>
     <div class="balloons">
         <div class="balloon" style="left: 20%; background: #ffb6c1; animation-duration: 4s;"></div>
         <div class="balloon" style="left: 50%; background: #ff69b4; animation-duration: 6s;"></div>
         <div class="balloon" style="left: 80%; background: #ffc0cb; animation-duration: 5s;"></div>
     </div>
     <img src="https://i.imgur.com/YNdkMVD.png" alt="Cute Cat" width="200">
+    <div class="gif-container">
+        <div class="tenor-gif-embed left" data-postid="4875956593066505581" data-share-method="host" data-aspect-ratio="1.19139" data-width="50px">
+            <a href="https://tenor.com/view/kiss-gif-4875956593066505581">Kiss GIF</a> from 
+            <a href="https://tenor.com/search/kiss-gifs">Kiss GIFs</a>
+        </div>
+        <div class="tenor-gif-embed right" data-postid="4875956593066505581" data-share-method="host" data-aspect-ratio="1.19139" data-width="50px">
+            <a href="https://tenor.com/view/kiss-gif-4875956593066505581">Kiss GIF</a> from 
+            <a href="https://tenor.com/search/kiss-gifs">Kiss GIFs</a>
+        </div>
+    </div>
 </body>
 </html>
