@@ -2,71 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=dev, initial-scale=1.0">
     <title>Happy Birthday!</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             text-align: center;
-            background: linear-gradient(to right, #ff9a9e, #fad0c4);
-            color: white;
-            margin: 0;
-            padding: 0;
+            background: #fce4ec;
+            font-family: Georgia, sans-serif; color: #e0218a;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            overflow: hidden;
         }
         h1 {
             font-size: 3em;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.5em;
-            max-width: 600px;
+            color: white;
         }
         .balloons {
             position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
             width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none;
+            top: 0;
         }
         .balloon {
-            position: absolute;
-            bottom: -100px;
             width: 50px;
             height: 70px;
-            background-color: rgba(255, 255, 255, 0.7);
+            background: pink;
             border-radius: 50%;
-            animation: float 5s linear infinite;
+            position: absolute;
+            bottom: -100px;
+            animation: floatUp 5s infinite ease-in-out;
         }
-        @keyframes float {
-            0% { transform: translateY(0); opacity: 1; }
-            100% { transform: translateY(-100vh); opacity: 0; }
+        @keyframes floatUp {
+            0% { transform: translateY(100vh); opacity: 0; }
+            100% { transform: translateY(-10vh); opacity: 1; }
         }
     </style>
+    <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 </head>
 <body>
-    <h1>Happy Birthday Eonnie!</h1>
-    <p>Wishing you a day filled with love, joy, and all the happiness in the world!</p>
-    <div class="balloons"></div>
-    <script>
-        function createBalloons() {
-            const balloonContainer = document.querySelector('.balloons');
-            for (let i = 0; i < 15; i++) {
-                let balloon = document.createElement('div');
-                balloon.classList.add('balloon');
-                balloon.style.left = Math.random() * 100 + 'vw';
-                balloon.style.animationDuration = (Math.random() * 3 + 3) + 's';
-                balloonContainer.appendChild(balloon);
-            }
-        }
-        createBalloons();
-    </script>
+    <h1>🎉 Happy Birthday! 🎂</h1>
+    <p>Wishing you a day filled with love, joy, and laughter!</p>
+    <div class="balloons">
+        <div class="balloon" style="left: 20%; background: #ffb6c1; animation-duration: 4s;"></div>
+        <div class="balloon" style="left: 50%; background: #ff69b4; animation-duration: 6s;"></div>
+        <div class="balloon" style="left: 80%; background: #ffc0cb; animation-duration: 5s;"></div>
+    </div>
+    <blockquote class="imgur-embed-pub" lang="en" data-id="a/meow-trjWHQy">
+        <a href="//imgur.com/a/meow-trjWHQy">Meow</a>
+    </blockquote>
 </body>
 </html>
